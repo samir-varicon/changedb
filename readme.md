@@ -19,6 +19,16 @@ This script automates the process of switching databases within a Docker environ
 Ensure you have Docker and Docker Compose installed on your system.
 
 ## Installation
+```bash
+git clone git@github.com:samir-varicon/changedb.git
+
+cd changedb
+
+mv changedb.sh $HOME/Work/varicon-docker
+
+chmod +x $HOME/Work/varicon-docker/switch_database.sh
+
+```
 
 Place the script in $HOME/Work/varicon-docker directory for easy access.
 
@@ -35,7 +45,7 @@ The script takes the following arguments:
 ### Example
 
 ```
-./switch_database.sh my_new_database db_setup.sql
+./changedb.sh my_new_database db_setup.sql
 ```
 
 ### Optional Flag
@@ -43,7 +53,7 @@ The script takes the following arguments:
 - `-D`: If specified, it will delete the existing database before proceeding with the switch.
 
 ```
-./switch_database.sh multitenant_db staging_db.sql -D 
+./changedb.sh multitenant_db staging_db.sql -D 
 ```
 
 ## Steps
